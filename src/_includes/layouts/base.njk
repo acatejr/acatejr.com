@@ -1,0 +1,57 @@
+---
+year: 2025
+---
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "My Site" }}</title>
+    <meta name="description" content="{{ description or 'Welcome to my website' }}">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Optional: Custom styles -->
+    <style>
+        /* Any custom styles can go here */
+    </style>
+</head>
+<body class="h-full bg-gray-50">
+    <!-- Simple header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-semibold text-gray-900">
+                        {{ siteName or "acatejr.com" }}
+                    </a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="/" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/blog" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="/resume" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+                    {# <a href="/about" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/contact" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a> #}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white rounded-lg shadow px-6 py-8">
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <!-- Simple footer -->
+    <footer class="bg-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-gray-500 text-sm">
+                &copy; {{ year }} {{ siteName or "www.acatejr.com" }}. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
