@@ -1,6 +1,4 @@
----
-title: acatejr.com
----
-# {{ title }}
+# acatejr.com
 
-The [site's url](https://acatejr-com.pages.dev/).
+The [site's dev url](https://acatejr-com.pages.dev/).  
+The [domain](https://acatejr.com).
